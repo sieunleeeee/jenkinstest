@@ -27,6 +27,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+               sh "chmod 777 ./rsync.sh"
                sh "./rsync.sh"
             }
 
