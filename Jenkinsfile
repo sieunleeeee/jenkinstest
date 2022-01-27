@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-              sh rsync.sh
+              sh "rsync.sh"
             }
 
             post {
