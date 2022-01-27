@@ -25,7 +25,13 @@ pipeline {
                 }
             }
         }
-        
+        stage('Deploy') {
+            steps {
+              rsync -avrz --delete ./* 15.164.230.227::backup
+
+            }
+
+        }
     }
 }
 
