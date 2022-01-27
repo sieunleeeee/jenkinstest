@@ -25,19 +25,7 @@ pipeline {
                 }
             }
         }
-        stage('Deploy') {
-            steps {
-              rsync -avrz --delete ./* 15.164.230.227::backup
-
-            }
-
-            post {
-                // If Maven was able to run the tests, even if some of the test
-                // failed, record the test results and archive the jar file.
-                success {
-                    
-                }
-            }
-        }
+        
     }
 }
+
